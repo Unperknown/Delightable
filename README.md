@@ -41,5 +41,6 @@ Delightable provides multiplay of several minigame by its web platform.
 #### June 11th : Found Inspiration with teammate and filled out the project plan!
 프로젝트 팀원과 함께 토의를 거쳤고 그 결과 웹 상에서 멀티 플레이를 할 수 있는 게임을 만들기로 하였다. 작품 이름은 Delightable이며 사용할 기술로 학교 프로젝트 규칙에 따라서 넣은 Express.js, MongoDB, 그 외에 Front-end 작업을 위해서 React까지 세 프레임워크를 사용하기로 하였다.
 
-#### June 12th : Prototype Design.
+#### June 12th : Front-end Design.
 ![Logo Prototype](/Prototypes/logo.png)
+![Login Prototype](/Prototypes/login.png)
