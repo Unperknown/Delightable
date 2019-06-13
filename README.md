@@ -28,10 +28,10 @@ Delightable provides multiplay of several minigame by its web platform.
 ### Additional Stack
 #### - React : used in front-end development
 
-## Entire Process
+## ⏳Entire Process
 홈페이지 구상 → 자료 조사 → 사이트맵 확정 → 스토리 보드 작성 → 메인 및 서브 페이지 시안 → 페이지 상세 디자인 → 사이트 개발 → 테스트 및 완료 → 발표
 
-## 🕤Project Schedule And Daily Progress
+## 🕤📅Project Schedule And Daily Progress
 ### Milestone
 - June 18th : Project Plan Submission Deadline
 - June 28th : Implementation and Presentation Preparation Deadline
@@ -43,9 +43,9 @@ Delightable provides multiplay of several minigame by its web platform.
 
 #### June 12th : Front-end Design.
 간단한 웹 페이지 프로토타입을 제작하였다. 다음은 초기 웹 화면과 로그인 화면이다.
-![Logo Prototype](/Prototypes/logo.png)
-![Login Prototype](/Prototypes/login.png)
+![Logo Prototype](/docs/images/logo.png =700x)
+![Login Prototype](/docs/images/login.png =700x)
 
 #### June 13th : Attacted Back-end with Express.js, Register Screen Prototype!
 Express.js로 Endpoint를 구성하여 어제 제작한 Front-end 파일을 서버에서 실행할 수 있도록 하였다. 아래는 그 날 제작한 회원 가입 화면이다.
-![Register Prototype](/Prototypes/register.png)
+![Register Prototype](/docs/images/register.png =700x)
