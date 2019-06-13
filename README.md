@@ -42,5 +42,10 @@ Delightable provides multiplay of several minigame by its web platform.
 프로젝트 팀원과 함께 토의를 거쳤고 그 결과 웹 상에서 멀티 플레이를 할 수 있는 게임을 만들기로 하였다. 작품 이름은 Delightable이며 사용할 기술로 학교 프로젝트 규칙에 따라서 넣은 Express.js, MongoDB, 그 외에 Front-end 작업을 위해서 React까지 세 프레임워크를 사용하기로 하였다.
 
 #### June 12th : Front-end Design.
+간단한 웹 페이지 프로토타입을 제작하였다. 다음은 초기 웹 화면과 로그인 화면이다.
 ![Logo Prototype](/Prototypes/logo.png)
 ![Login Prototype](/Prototypes/login.png)
+
+#### June 13th : Attacted Back-end with Express.js, Register Screen Prototype!
+Express.js로 Endpoint를 구성하여 어제 제작한 Front-end 파일을 서버에서 실행할 수 있도록 하였다. 아래는 그 날 제작한 회원 가입 화면이다.
+![Register Prototype](/Prototypes/register.png)
