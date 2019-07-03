@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/univ.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+    <title>Delightable</title>
+</head>
+<body>
+    <form action="http://localhost:8080/login" method="POST">
+        <div class="login">
+            <p id="header"><img class="logo-img" src="/images/icon.png" alt="Logo"></p>
+            <table id="context">
+                <tr>
+                    <td>🆔ID</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="designed-button" type="text" name="ID" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>🔐Password</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="designed-button" type="password" name="password" autocomplete="off">
+                    </td>
+                </tr>
+            </table>
+            <span id="footer">
+                    <div class="error"><%= error_message %></div>
+                    <input id="button" type="submit" value="Sign In"><br>
+                    <a class="register-redirect" href="/register">Not registered yet?</a>
+            </span>
+        </div>
+    </form>
+</body>
+</html>

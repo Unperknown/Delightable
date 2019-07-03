@@ -1,21 +1,54 @@
 const express = require('express');
-const logger = require('morgan');
-const favicon = require('serve-favicon');
+const cookieParser = require('cookie-parser');
 const path = require('path');
-
-const init_router = require('./routes/init');
-
-const port = 8080;
-
+const logger = require('morgan');
+const uuid = require('uuid/v4');
+const favicon = require('serve-favicon');
+const session = require('express-session');
+const fileStore = require('connect-mongodb-session')(session);
 const app = express();
 
-app.use(favicon(path.join(__dirname, 'views/style', 'favicon.png')));
+const homeRouter = require('./routes/home');
+const loginRouter = require('./routes/login');
+const logoutRouter = require('./routes/logout');
+const registerRouter = require('./routes/register');
+const mainRouter = require('./routes/main');
+const ezamemagRouter = require('./routes/ezamemag');
+const rankingRouter = require('./routes/ranking');
+
 app.use(logger('dev'));
-app.use(express.static(__dirname + '/views/style'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public/favicon', 'favicon.png')));
 
-app.use('/', init_router);
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.set('views', './views/');
 
-app.listen(port, () => {
-    console.log('Waiting for port 8080');
-});
+app.use(session({
+    generateID: req => {
+        console.log('Inside the session middleware');
+        console.log(req.sessionID);
+        return uuid();
+    },
+    store: new fileStore({
+        uri: 'mongodb://localhost:27017',
+        databaseName: 'Delightable',
+        collection: 'session'
+    }),
+    secret: 'Literally Secret.',
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.use('/', homeRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/register', registerRouter);
+app.use('/main', mainRouter);
+app.use('/play/ezamemag', ezamemagRouter);
+app.use('/main/ranking', rankingRouter);
+
+module.exports = app;

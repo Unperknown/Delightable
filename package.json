@@ -1,18 +1,21 @@
 {
-  "name": "delightable",
-  "version": "1.0.0",
-  "description": "provides multiplay of several minigame by its web platform.",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongodb": "^3.2.7",
-    "morgan": "^1.9.1",
-    "serve-favicon": "^2.5.0"
-  },
-  "devDependencies": {},
+  "name": "delightable-ver.2",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www"
   },
-  "author": "Unperknown, iov somnimum",
-  "license": "MIT"
+  "dependencies": {
+    "assert": "^2.0.0",
+    "async": "^3.1.0",
+    "connect-mongodb-session": "^2.2.0",
+    "cookie-parser": "~1.4.4",
+    "ejs": "^2.6.2",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.2.7",
+    "morgan": "~1.9.1",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.3.2"
+  }
 }

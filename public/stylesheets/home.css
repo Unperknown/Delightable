@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    background-color: yellow;
+}
+.header {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: block;
+    background-color: white;
+    padding: 20px 10px;
+}
+.title {
+    color: black;
+    font-size: 40px;
+    padding: 10px 10px;
+}
+.logo {
+    width: 70px;
+    height: 56px;
+    padding: 10px 10px;
+}
+.components {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 450px;
+    padding: 50px 50px 50px 50px;
+}
+.component {
+    float: left;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-color: lightgreen;
+    border: none;
+    margin: 25px 25px 25px 25px;
+    border-radius: 10px;
+}
+#logo {
+    margin-top: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#component-img {
+    width: 350px;
+    height: 350px;
+}

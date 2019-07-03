@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/univ.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/register.css">
+    <title>Delightable</title>
+</head>
+<body>
+    <form action="http://localhost:8080/register" method="POST">
+        <div class="register">
+            <p id="header"><img class="logo-img" src="/images/icon.png" alt="Logo"></p>
+            <p id="desc">Fill out to sign up</p>
+            <table id="context">
+                <tr>
+                    <td><input id="designed-button" type="text" name="username" placeholder="Your Username" autocomplete="off">
+                </tr>
+                <tr>
+                    <td><input id="designed-button" type="text" name="ID" placeholder="Your ID" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><input id="designed-button" type="password" name="password" placeholder="Your Password" autocomplete="off"></td>
+                </tr>
+            </table>
+            <div class="error"><%= error_message %></div>
+            <input id="button" type="submit" value="Create Your Account"><br>
+        </div>
+    </form>
+</body>
+</html>
