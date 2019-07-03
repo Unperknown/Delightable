@@ -43,9 +43,9 @@ Delightable provides multiplay of several minigame by its web platform.
 
 #### June 12th : Front-end Design.
 간단한 웹 페이지 프로토타입을 제작하였다. 다음은 초기 웹 화면과 로그인 화면이다.
-![Logo Prototype](/docs/images/logo.png =700x)
-![Login Prototype](/docs/images/login.png =700x)
+![Logo Prototype](/docs/images/logo.png)
+![Login Prototype](/docs/images/login.png)
 
 #### June 13th : Attacted Back-end with Express.js, Register Screen Prototype!
 Express.js로 Endpoint를 구성하여 어제 제작한 Front-end 파일을 서버에서 실행할 수 있도록 하였다. 아래는 그 날 제작한 회원 가입 화면이다.
-![Register Prototype](/docs/images/register.png =700x)
+![Register Prototype](/docs/images/register.png)
