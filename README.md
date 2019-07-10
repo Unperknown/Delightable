@@ -43,9 +43,26 @@ Delightable provides multiplay of several minigame by its web platform.
 
 #### June 12th : Front-end Design.
 간단한 웹 페이지 프로토타입을 제작하였다. 다음은 초기 웹 화면과 로그인 화면이다.
-![Logo Prototype](/docs/images/logo.png)
-![Login Prototype](/docs/images/login.png)
+![Logo Prototype](/image-for-doc/loading-page(old).png)
+![Login Prototype](/image-for-doc/login-page(old).png)
 
 #### June 13th : Attacted Back-end with Express.js, Register Screen Prototype!
 Express.js로 Endpoint를 구성하여 어제 제작한 Front-end 파일을 서버에서 실행할 수 있도록 하였다. 아래는 그 날 제작한 회원 가입 화면이다.
-![Register Prototype](/docs/images/register.png)
+![Register Prototype](/image-for-doc/register-page(old).png)
+
+#### June 17th ~ June 21th : Happy Trip!⛱️🏝️
+
+#### June 24th ~ June 28th : Added Login System with Session, Refined CSS for Better Design ~~(but've got a cold for a while...)~~
+세션을 이용하여 로그인 시스템을 구축하였다. 그리고 저번 프로토타입에서 발전시켜 웹 페이지 디자인을 더 정교하게 다듬었다.
+![Loading Page](/image-for-doc/loading-page.png)
+![Login Page](/image-for-doc/login-page.png)
+![Register Page](/image-for-doc/register-page.png)
+
+#### July 1th ~ July 5th : Stopped for FINAL TEST!📝😵
+
+#### July 9th ~ July 10th : Added Main Page and Ranking Page, Finally Heading Out for Game!
+메인 페이지와 랭킹 페이지를 제작하였다. 그리고 가장 중요한 요소인 게임 페이지를 곧 만들려고 한다.
+![Main Page](/image-for-doc/main-page.png)
+![Ranking Page](/image-for-doc/ranking-page.png)
+
+#### July 10th : Prepare for the Presentation
