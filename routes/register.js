@@ -2,8 +2,11 @@ const express = require('express');
 const router = express.Router();
 const users = require('../users/user');
 
+const noMessage = "";
+const invaildInputErrorMessage = "Each entered sentence must be more than 8 letters long.";
+
 router.get('/', (req, res) => {
-    res.render('register.html', { error_message: "" }, (err, html) => {
+    res.render('register.html', { error_message: noMessage }, (err, html) => {
         if (err) {
             console.log(err.message);
         } else {
@@ -13,8 +16,8 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    if (req.body.username.length < 8 || req.body.ID.length < 8 || req.body.password.length < 8) {
-        res.render('register.html', { error_message: "Each entered sentence must be more than 8 letters long." }, (err, html) => {
+    if (isUserDataInvaild(req.body)) {
+        res.render('register.html', { error_message: invaildInputErrorMessage }, (err, html) => {
             if (err) {
                 console.log(err.message);
             } else {
@@ -28,3 +31,7 @@ router.post('/', (req, res) => {
 })
 
 module.exports = router;
+
+const isUserDataInvaild = user => {
+    return user.username.length < 8 || user.ID.length < 8 || user.password.length < 8;
+};

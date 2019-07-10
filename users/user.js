@@ -4,7 +4,7 @@ exports.create = user => {
     return db.find({ ID: { $eq: user.ID }})
         .then(result => {
             if (result === null) {
-                db.insert({ username: user.username, ID: user.ID, password: user.password, createdDate: new Date().toISOString() });
+                db.insert({ username: user.username, ID: user.ID, password: user.password, createdDate: new Date().toISOString(), score: 0 });
             }
         });
 };
@@ -15,4 +15,8 @@ exports.validate = user => {
 
 exports.authentication = user => {
     return db.find({ ID: { $eq: user.ID }});
+};
+
+exports.getAll = () => {
+    return db.findAll({ score: -1 });
 };

@@ -46,7 +46,7 @@
     text-decoration: none;
 }
 .error {
-    transition: 2.5s;
+    transition: 1.5s;
     overflow: hidden;
     font-style: bold;
     text-align: center;

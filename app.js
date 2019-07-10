@@ -14,6 +14,8 @@ const logoutRouter = require('./routes/logout');
 const registerRouter = require('./routes/register');
 const mainRouter = require('./routes/main');
 const ezamemagRouter = require('./routes/ezamemag');
+const tictactoeRouter = require('./routes/tictactoe');
+const randomNumberRouter = require('./routes/random-number');
 const rankingRouter = require('./routes/ranking');
 
 app.use(logger('dev'));
@@ -49,6 +51,8 @@ app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
 app.use('/main', mainRouter);
 app.use('/play/ezamemag', ezamemagRouter);
+app.use('/play/tic-tac-toe', tictactoeRouter);
+app.use('/play/random-number', randomNumberRouter);
 app.use('/main/ranking', rankingRouter);
 
 module.exports = app;

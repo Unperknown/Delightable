@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/univ.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/ezamemag.css">
-    <title>Delightable - Playing EzamEmag</title>
+    <title>Delightable</title>
 </head>
 
 <body>
@@ -17,13 +16,25 @@
         <div class="component">
             <span class='left-content'><img src="/images/logo.png" alt="Logo"></span>
             <span class='right-content'>
-                <div class='message'>Logined as <b><%= username %></b></div>
+                <div class='message'>Logined as <b><%= session.username %></b></div>
                 <a href="/main">
                     <div class="right-icon">
                         <img src="/images/previous.png" alt="Back To Main Page">
                     </div>
                 </a>
             </span>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Ranking</h1>
+        <div class="ranking">
+            <ol>
+                <% for (let i in users) { %>
+                <li>
+                    <%= users[i].username %> : <%= users[i].score %>
+                </li>
+                <% } %>
+            </ol>
         </div>
     </div>
 </body>

@@ -1,0 +1,10 @@
+body {
+	background-color: #f9f9f9;
+}
+.random-button {
+	display: inline-block;
+	color: white;
+	background-color: navy;
+	width: 200px;
+	height: 200px;
+}

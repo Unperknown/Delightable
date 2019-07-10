@@ -1,44 +1,157 @@
 body {
-    margin: 0;
-    background-color: yellow;
+    background-color: lightcoral;
+    color: black;
+    opacity: 50%;
+    text-align: center;
+}
+a {
+    text-decoration: none;
 }
 .header {
     position: sticky;
     top: 0;
     overflow: hidden;
+    width: 100%;
     display: block;
+    font-size: 25px;
+    margin-bottom: 50px;
     background-color: white;
-    padding: 20px 10px;
-}
-.title {
     color: black;
-    font-size: 40px;
-    padding: 10px 10px;
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.1);
 }
-.logo {
-    width: 70px;
-    height: 56px;
-    padding: 10px 10px;
+.header .component {
+    padding: 15px 50px 0px 50px;
 }
-.components {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 450px;
-    padding: 50px 50px 50px 50px;
-}
-.component {
+.left-content {
     float: left;
-    width: 400px;
-    height: 400px;
+}
+.left-content img {
+    width: 280px;
+    height: 70px;
+}
+
+.right-content {
+    float: right;
+}
+.message {
+    display: inline-block;
+}
+.right-icon {
+    display: inline-block;
+    margin-left: 10px;
+    transition-duration: 0.3s;
+}
+.right-icon:hover {
+    background-color: #EFEFEF;
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+.right-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.content {
+    font-size: 20px;
+    margin: 20px 250px 50px 250px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 10px 50px 0 rgba(0,0,0,0.19);
+    display: flexbox;
+    align-items: center;
+    vertical-align: center;
     text-align: center;
-    background-color: lightgreen;
-    border: none;
-    margin: 25px 25px 25px 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     border-radius: 10px;
 }
+.content #inside {
+    padding: 20px 20px 20px 20px;
+}
+.game-menu {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    background-color: navy;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 10px 10px 0 rgba(0,0,0,0.19);
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+.button:hover {
+    transform: scale(0.9);
+}
+.button img {
+    padding-top: 50px;
+    width: 150px;
+    height: 150px;
+}
+#game-title {
+    padding-top: 20px;
+    text-indent: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+#game-desc {
+    padding-left: 15px;
+    width: 250px;
+    font-size: 18px;
+    word-break: normal;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.ranking ol{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.ranking li {
+    background-color: #F7F5F2;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 25px;
+    width: 800px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+.ranking li:hover {
+    background-color: #EFEFEF;
+    transform: scale(1.1);
+}
+.ranking li:nth-child(n) {
+    border-left: 5px solid lightslategrey;
+}
+.ranking li:nth-child(1) {
+    background-image: url('/images/trophy.png');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+    border-left: 5px solid gold;
+}
+.ranking li:nth-child(2) {
+    background-image: url('/images/trophy.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+    border-left: 5px solid silver;
+}
+.ranking li:nth-child(3) {
+    background-image: url('/images/trophy.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+    border-left: 5px solid brown;
+}
+
 #logo {
     margin-top: 25px;
     display: inline-block;

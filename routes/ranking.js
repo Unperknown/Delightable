@@ -1,14 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const users = require('../users/user');
+
+const assert = require('assert');
 
 router.get('/', function(req, res, next) {
-  res.render('ezamemag.html', (err, html) => {
-    if (err) {
-      console.log(err.message);
-    } else {
-      res.send(html);
-    }
-  });
+	if (req.session.user) {
+		users.getAll().then(result => {
+			res.render('ranking.html', { users: result, session: req.session.user }, (err, html) => {
+				assert.equal(err, null);
+				res.send(html);
+		  	});
+		});
+	} else {
+		res.redirect('/login');
+	}
 });
 
 module.exports = router;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,111 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
     <title>Delightable</title>
 </head>
+
 <body>
-    <div class="header"><span><img class="logo" src="/images/icon.png" alt="Logo"></span><span class="title">Hello, <%= username %>!</span></div>
-    <div class="components">
-        <a href="/play/ezamemag">
-            <div class="component">
-                <span id="logo"><img id="component-img" src="/images/maze.png" alt="EzamEmag"></span>
-            </div>
-        </a>
-        <a href="/main/ranking">
-            <div class="component">
-                <span id="logo"><img id="component-img" src="/images/rank.png" alt="Ranking"></span>
-            </div>
-        </a>
+    <div class="header">
+        <div class="component">
+            <span class='left-content'><img src="/images/logo.png" alt="Logo"></span>
+            <span class='right-content'>
+                <div class='message'>Logined as <b><%= username %></b></div>
+                <a href="/main/ranking">
+                    <div class="right-icon">
+                        <img src="/images/rank.png" alt="See Ranking">
+                    </div>
+                </a>
+                <a href="/logout">
+                    <div class="right-icon">
+                        <img src="/images/previous.png" alt="Logout">
+                    </div>
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="content">
+        <table class="game-menu">
+            <tr>
+                <th colspan="3">
+                    <h1>Choose Your Game!</h1>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/play/ezamemag">
+                        <div class="button">
+                            <img src="/images/maze.png" alt="EzamEmag">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="/play/tic-tac-toe">
+                        <div class="button">
+                            <img src="/images/tictactoe.png" alt="Tic-Tac-Toe">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="/play/random-number">
+                        <div class="button">
+                            <img src="/images/number.png" alt="Tic-Tac-Toe">
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="game-title">EzamEmag</div>
+                    <div id="game-desc">You can be like Hem and Haw while on that. Let's explore in a complex maze.
+                    </div>
+                </td>
+                <td>
+                    <div id="game-title">Tic-Tac-Toe</div>
+                    <div id="game-desc">Simple but difficult? Make your own bingo faster than bot!</div>
+                </td>
+                <td>
+                    <div id="game-title">Random Number</div>
+                    <div id="game-desc">A simplest game among all of what Delightable offers. It's up to you.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#">
+                        <div class="button">
+                            <img src="/images/in-progress.png" alt="EzamEmag">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <div class="button">
+                            <img src="/images/in-progress.png" alt="Tic-Tac-Toe">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <div class="button">
+                            <img src="/images/in-progress.png" alt="Tic-Tac-Toe">
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="game-title">In progress...</div>
+                    <div id="game-desc">Don't click me!</div>
+                </td>
+                <td>
+                    <div id="game-title">In progress...</div>
+                    <div id="game-desc">Don't click me!</div>
+                </td>
+                <td>
+                    <div id="game-title">In progress...</div>
+                    <div id="game-desc">Don't click me!</div>
+                </td>
+            </tr>
+        </table>
+
     </div>
 </body>
+
 </html>
