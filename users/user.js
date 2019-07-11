@@ -1,10 +1,13 @@
 const db = require('../database/dbCRUD');
 
 exports.create = user => {
-    return db.find({ ID: { $eq: user.ID }})
+    return db.find({ $or : [{ ID: { $eq: user.ID }}, { username: { $eq: user.username }}]})
         .then(result => {
             if (result === null) {
                 db.insert({ username: user.username, ID: user.ID, password: user.password, createdDate: new Date().toISOString(), score: 0 });
+                return 'User Created';
+            } else {
+                return 'User Not Created';
             }
         });
 };

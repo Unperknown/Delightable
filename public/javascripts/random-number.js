@@ -56,6 +56,7 @@ const pickRandomNumber = max => {
 const disableAll = (buttons, exceptionIndex) => {
     const screen = document.querySelector('#content');
     const header = document.querySelector('#header');
+    const redirections = document.querySelectorAll('a');
     header.setAttribute('class', 'blur');
     screen.setAttribute('class', 'blur');
 
@@ -68,6 +69,14 @@ const disableAll = (buttons, exceptionIndex) => {
         if (index != exceptionIndex) {
             buttons[index].style.background = 'lightgray';
         }
+    }
+
+    for (let index in redirections) {
+        if (index === 'length') {
+            break;
+        }
+
+        redirections[index].href = '#';
     }
 };
 

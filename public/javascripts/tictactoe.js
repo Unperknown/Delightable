@@ -63,60 +63,6 @@ const setTurn = () => {
     }
 };
 
-const runAITurn = (squares, mark = xMark) => {
-    var available = Array.from(squares).filter(square => square.innerHTML === empty);
-    var status = getStatus(squares);
-    var moves = [];
-
-    if (status === winMessage) {
-        return { score: -10 };
-    } else if (status === loseMessage) {
-        return { score: 10 };
-    } else if (available.length === 0) {
-        return { score: 0 };
-    }
-
-    for (let index in available) {
-        let move = {};
-        move.index = available[index];
-
-        if (mark === xMark) {
-            let result = runAITurn(squares, oMark);
-            move.score = result.score;
-        } else {
-            let result = runAITurn(squares, xMark);
-            move.score = result.score;
-        }
-        
-        available[index] = move.index;
-
-        moves.push(move);
-    }
-
-    let best;
-
-    if (mark === xMark) {
-        let score = -100;
-        for (let index in moves) {
-            if (moves[index].score > score) {
-                score = moves[index].score;
-                best = index;
-            }
-        }
-    } else {
-        let score = 100;
-
-        for (let index in moves) {
-            if (moves[index].score < score) {
-                score = moves[index].score;
-                best = index;
-            }
-        }
-    }
-
-    return moves[best];
-};
-
 const getStatus = (squares, currentMark) => {
     const boardIndexes = [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]; 
     const possibleBingoIndexes = [[ 0, 1, 2 ], [ 3, 4, 5 ], [ 6, 7, 8 ], [ 0, 3, 6 ], [ 1, 4, 7 ], [ 2, 5, 8 ], [ 0, 4, 8 ], [ 2, 4, 6 ]];
@@ -142,6 +88,7 @@ const getStatus = (squares, currentMark) => {
 };
 
 const disableTicTacToe = (squares, status) => {
+    let redirections = document.querySelectorAll('a');
     let bingo = status.targets.map(x => squares[x]);
 
     for (let index in squares) {
@@ -150,6 +97,14 @@ const disableTicTacToe = (squares, status) => {
         }
 
         squares[index].disabled = true;
+    }
+
+    for (let index in redirections) {
+        if (index === 'length') {
+            break;
+        }
+
+        redirections[index].href = '#';
     }
 
     for (let index in bingo) {
