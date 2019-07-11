@@ -7,7 +7,7 @@ body {
 a {
     text-decoration: none;
 }
-.header {
+#header {
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -19,7 +19,7 @@ a {
     color: black;
     box-shadow: 0 10px 15px 0 rgba(0,0,0,0.1);
 }
-.header .component {
+#header .component {
     padding: 15px 50px 0px 50px;
 }
 .left-content {
@@ -32,6 +32,7 @@ a {
 
 .right-content {
     float: right;
+    text-align: right;
 }
 .message {
     display: inline-block;

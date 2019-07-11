@@ -1,10 +1,56 @@
 body {
 	background-color: #f9f9f9;
 }
+input {
+	visibility: hidden;
+	position: absolute;
+}
+#end-message {
+	position: absolute;
+    display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 500px;
+	font-size: 40px;
+	color: black;
+	background-color: white;
+	text-align: center;
+	border: 7px solid black;
+	padding: 0 10px 10px 10px;
+}
+#answer {
+	font-size: 250px;
+}
 .random-button {
 	display: inline-block;
+	font-size: 50px;
 	color: white;
-	background-color: navy;
-	width: 200px;
-	height: 200px;
+	width: 175px;
+	height: 175px;
+	border: none;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	border-radius: 50%;
+	transition-duration: 0.5s;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.random-button:hover {
+	animation: bounce 2s linear infinite;
+}
+.blur {
+	filter: blur(2px);
+}
+
+@keyframes bounce {
+	25% {
+		transform: scale(1.1);
+	}
+	75% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1.0);
+	}
 }

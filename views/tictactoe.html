@@ -9,16 +9,16 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/univ.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/tic-tac-toe.css">
-    <script src="../game/tic-tac-toe.js"></script>
+    <script src="/javascripts/tictactoe.js"></script>
     <title>Delightable - Playing Tic-Tac-Toe</title>
 </head>
 
 <body>
-    <div class="header">
+    <div id="header">
         <div class="component">
             <span class='left-content'><img src="/images/logo.png" alt="Logo"></span>
             <span class='right-content'>
-                <div class='message'>Logined as <b><%= username %></b></div>
+                <div class='message'>Logined as <b><%= username %></b><br>Score: <%= score %></div>
                 <a href="/main">
                     <div class="right-icon">
                         <img src="/images/previous.png" alt="Back To Main Page">
@@ -27,6 +27,29 @@
             </span>
         </div>
     </div>
+    <div id="content">
+        <table id="frame">
+            <tr>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+            </tr>
+            <tr>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+            </tr>
+            <tr>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+                <td><input type="image" src="/images/empty.png"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="end-message"><span id="status"></span></div>
+    <form name="stageResult" action="http://localhost:8080/play/tic-tac-toe" method="POST">
+        <input id="score" name="score" type="text" value="0" />
+    </form>
 </body>
 
 </html>

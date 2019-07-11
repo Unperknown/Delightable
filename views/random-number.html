@@ -9,15 +9,16 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/univ.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/random-number.css">
+    <script type="text/javascript" src='/javascripts/random-number.js'></script>
     <title>Delightable - Playing Random Number</title>
 </head>
 
 <body>
-    <div class="header">
+    <div id="header">
         <div class="component">
             <span class='left-content'><img src="/images/logo.png" alt="Logo"></span>
             <span class='right-content'>
-                <div class='message'>Logined as <b><%= username %></b></div>
+                <div class='message'>Logined as <b><%= username %></b><br>Score: <%= score %></div>
                 <a href="/main">
                     <div class="right-icon">
                         <img src="/images/previous.png" alt="Back To Main Page">
@@ -26,15 +27,38 @@
             </span>
         </div>
     </div>
-    <div>
-        <div class="number"><h1>5</h1></div>
+    <div id="content">
         <div class="random-buttons">
-            <div class="random-button"><h2>1</h2></div>
-            <div class="random-button"><h2>2</h2></div>
-            <div class="random-button"><h2>3</h2></div>
-            <div class="random-button"><h2>4</h2></div>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
+            <button class="random-button"></button>
         </div>
     </div>
+    <div id="end-message"></div>
+    <form name="stageResult" action="http://localhost:8080/play/random-number" method="POST">
+        <input id="score" name="score" type="text" value="0" />
+    </form>
 </body>
 
 </html>

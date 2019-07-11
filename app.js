@@ -40,6 +40,9 @@ app.use(session({
         databaseName: 'Delightable',
         collection: 'session'
     }),
+    cookie: {
+        maxAge: 3600000
+    },
     secret: 'Literally Secret.',
     resave: false,
     saveUninitialized: true

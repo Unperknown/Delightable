@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res) => {
   	if (req.session.user) {
   	  	res.render('ezamemag.html', req.session.user, (err, html) => {
   	  		if (err) {

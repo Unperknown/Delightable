@@ -20,3 +20,7 @@ exports.authentication = user => {
 exports.getAll = () => {
     return db.findAll({ score: -1 });
 };
+
+exports.updateValue = (username, score) => {
+    return db.update({ username: { $eq: username }}, { $inc: { score : score } });
+}

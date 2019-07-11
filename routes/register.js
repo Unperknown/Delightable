@@ -3,7 +3,7 @@ const router = express.Router();
 const users = require('../users/user');
 
 const noMessage = "";
-const invaildInputErrorMessage = "Each entered sentence must be more than 8 letters long.";
+const invaildInputErrorMessage = "Each entered sentence must be at least 8 letters long.";
 
 router.get('/', (req, res) => {
     res.render('register.html', { error_message: noMessage }, (err, html) => {
@@ -26,7 +26,11 @@ router.post('/', (req, res) => {
         });
     } else {
         users.create(req.body)
-        .then(_ => res.redirect('/login'));
+        .then(_ => res.redirect('/login'))
+        .catch(err => {
+            console.log(err);
+            res.redirect('/register');
+        });
     }
 })
 

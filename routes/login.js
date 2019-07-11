@@ -5,7 +5,7 @@ const users = require('../users/user');
 const assert = require('assert');
 
 const noMessage = "";
-const userDataInvaildErrorMessage = "ID and password must be more than 8 letters long.";
+const userDataInvaildErrorMessage = "ID and password must be at least 8 letters long.";
 const nonExistAccountErrorMessage = "That Delightable account doesn't exist. Enter a different account or get a new one below.";
 
 router.get('/', (req, res) => {
@@ -35,8 +35,15 @@ router.post('/', (req, res) => {
 				});
 			} else {
 				req.session.user = result;
-				res.redirect('/main');
+
+				req.session.save(() => {
+					res.redirect('/main');
+				});
 			}
+		})
+		.catch(err => {
+			console.log(err);
+			res.redirect('/login');
 		});
 	}
 });
