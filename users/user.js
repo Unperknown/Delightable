@@ -1,10 +1,14 @@
 const db = require('../database/dbCRUD');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 exports.create = user => {
     return db.find({ $or : [{ ID: { $eq: user.ID }}, { username: { $eq: user.username }}]})
-        .then(result => {
+        .then(async result => {
             if (result === null) {
-                db.insert({ username: user.username, ID: user.ID, password: user.password, createdDate: new Date().toISOString(), score: 0 });
+                const hashedPassword = await bcrypt.hash(user.password, saltRounds);
+                db.insert({ username: user.username, ID: user.ID, password: hashedPassword, createdDate: new Date().toISOString(), score: 0 });
+
                 return 'User Created';
             } else {
                 return 'User Not Created';
@@ -12,11 +16,18 @@ exports.create = user => {
         });
 };
 
-exports.validate = user => {
-    return db.find({ ID: { $eq: user.ID }, password: { $eq: user.password }});
+exports.validate = async user => {
+    const result = await db.find({ ID : { $eq: user.ID }});
+    const matched = await bcrypt.compare(user.password, result.password);
+
+    if (matched) {
+        return result;
+    } else {
+        return PromiseRejectionEvent(new Error('User Not Match'));
+    }
 };
 
-exports.authentication = user => {
+exports.get = user => {
     return db.find({ ID: { $eq: user.ID }});
 };
 
