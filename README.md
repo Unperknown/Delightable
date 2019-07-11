@@ -2,7 +2,7 @@
 [![HitCount](http://hits.dwyl.io/Unperknown/server-project.svg)](http://hits.dwyl.io/Unperknown/server-project)
 [![LICENSE](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/Unperknown/AINOMOK/blob/master/LICENSE)
 # 🎮Delightable🕹️
-Delightable provides multiplay of several minigame by its web platform.
+Delightable provides several minigame by its web platform.
 
 ## 📋Purpose
   옛 플래시 게임의 유행이 식으면서 점차 생소해지고 있는 웹 플랫폼 게임을 되살리기 위해서 이번 Delightable 프로젝트를 시작하였다.
@@ -61,8 +61,11 @@ Express.js로 Endpoint를 구성하여 어제 제작한 Front-end 파일을 서�
 #### July 1th ~ July 5th : Stopped for FINAL TEST!📝😵
 
 #### July 9th ~ July 10th : Added Main Page and Ranking Page, Finally Heading Out for Game!
-메인 페이지와 랭킹 페이지를 제작하였다. 그리고 가장 중요한 요소인 게임 페이지를 곧 만들려고 한다.
+메인 페이지와 랭킹 페이지를 제작하였다. 그리고 가장 중요한 요소인 게임을 만들었다. 구현된 게임은 랜덤 숫자 게임과 틱텍토 게임이다.
 ![Main Page](/image-for-doc/main-page.png)
 ![Ranking Page](/image-for-doc/ranking-page.png)
+![Tic-Tac-Toe Page](/image-for-doc/tic-tac-toe-page.png)
+![Random Number Page](/image-for-doc/random-number.png)
 
-#### July 10th : Prepare for the Presentation
+#### July 11th : Prepared for the Presentation
+프로젝트 마감일에 다 같이 지금까지 프로젝트가 얼마나 진척되었는지 공유하고 발표하는 자리를 가졌다.
