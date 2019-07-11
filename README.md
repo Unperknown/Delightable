@@ -35,7 +35,7 @@ Delightable provides several minigame by its web platform.
 ### Milestone
 - June 18th : Project Plan Submission Deadline
 - June 28th : Implementation and Presentation Preparation Deadline
-- **July 10th : Final Deadline**
+- **July 11th : Final Deadline**
 
 ### Daily Progress
 #### June 11th : Found Inspiration with teammate and filled out the project plan!
