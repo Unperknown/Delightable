@@ -1,7 +1,6 @@
 window.onload = () => {
     const squares = document.querySelectorAll('td');
-    
-    setTurn();
+    let count = 0;
 
     for (let index in squares) {
         if (index === 'length') {
@@ -22,7 +21,9 @@ window.onload = () => {
                         submitResult(status.score);
                     }, 1000);
                 } else {
-                    setTurn();
+                    if (count++ % 2 == 0) {
+                        runComputerTurn(squares);
+                    }
                 }
             }
         });
@@ -51,16 +52,13 @@ const getNextMark = currentMark => {
     return currentMark === oMark ? xMark : oMark;
 };
 
-const setTurn = () => {
-    const turn = document.querySelector('#turn');
-    let playerTurn = "Your Turn";
-    let otherTurn = "Other's Turn";
+const runComputerTurn = squares => {
+    let available = Array.from(squares).filter(square => square.innerHTML === empty);
 
-    if (turn.innerHTML === playerTurn) {
-        turn.innerHTML = otherTurn;
-    } else {
-        turn.innerHTML = playerTurn;
-    }
+    let shuffled = available.sort(() => 0.5 - Math.random());
+    let selected = shuffled.slice(0, 1);
+
+    selected[0].click();
 };
 
 const runAITurn = (squares, mark = xMark) => {

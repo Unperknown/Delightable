@@ -39,6 +39,11 @@ input[type=submit], input[type=text] {
 	background-color: black;
 	border-collapse: collapse;
 }
+#turn {
+	border: none;
+	color: white;
+	font-size: 50px;
+}
 td {
 	border: 5px solid white;
 	white-space: nowrap;

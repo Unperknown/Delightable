@@ -26,10 +26,10 @@ window.onload = () => {
 
             message.style.display = 'block';
 
+            disableAll(buttons, answerIndex);
             setTimeout(() => {
-                disableAll(buttons, answerIndex);
                 submitResult(score);
-            }, 1000);
+            }, 500);
         });
     }
 }
